@@ -16,6 +16,7 @@ const enemy7 = board.addSprite("assets/enemy.png", "Enemy Ship7", 600, 200);
 const enemy8 = board.addSprite("assets/enemy.png", "Enemy Ship8", 700, 200);
 const enemy9 = board.addSprite("assets/enemy.png", "Enemy Ship9", 800, 200);
 const enemy10 = board.addSprite("assets/enemy.png", "Enemy Ship10", 900, 200);
+
 document.getElementById("startbtn").addEventListener("click", () => {
     setTimeout(() => {
         setInterval(() => enemy.move(board, "down"), 10);
@@ -29,17 +30,20 @@ document.getElementById("startbtn").addEventListener("click", () => {
         setInterval(() => enemy8.move(board, "down"), 70);
         setInterval(() => enemy9.move(board, "down"), 50);
         setInterval(() => enemy10.move(board, "down"), 10);
-    }, 4000);
+    }, 3000);
 });
+
+//Death mechanic definition so that we can apply it to sprites later on
 const death = function (intruderID) {
     const me = this;
     if (intruderID === "Player") {
         board.player.destroy();
     } else if (intruderID.substring(0, 4) === "proj") {
         this.destroy();
-        board.scoreText += 10;
+        board.scoreText += 10; // this is the global score counter for the game board
     }
 };
+// We are creating a powerup collision function so when the mushroom is touched the powerup takes effect
 const mushroomPowerup = function (intruderID) {
     const oldSpeed = board.player.speed;
     if (intruderID === "Player") {
@@ -51,6 +55,8 @@ const mushroomPowerup = function (intruderID) {
         board.player.speed = oldSpeed;
     }, 10000);
 };
+
+// Setting all the collisionBehavior functions of each sprite or else it won't take effect
 enemy.collisionBehavior = death;
 enemy2.collisionBehavior = death;
 enemy3.collisionBehavior = death;
