@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Retro.js</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script
+            src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Google fonts-->
+        <link
+            href="https://fonts.googleapis.com/css?family=Varela+Round"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav
+            class="navbar navbar-expand-lg navbar-light fixed-top"
+            id="mainNav"
+        >
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index.html"
+                    >Retro.js</a
+                >
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link js-scroll-trigger"
+                                href="documentation.html"
+                                >Documentation</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link js-scroll-trigger"
+                                href="getting-started.html"
+                                >Getting Started</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link js-scroll-trigger"
+                                href="examples.html"
+                                >Examples</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                class="download btn-danger"
+                                class="nav-link js-scroll-trigger"
+                            >
+                                <a href="RetroJS.zip">Download</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Retro.js</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                        A library for making 2D space shooters
+                    </h2>
+                    <a
+                        class="btn btn-primary js-scroll-trigger"
+                        href="#starting"
+                        >Retro.js</a
+                    >
+                    <a class="btn btn-primary js-scroll-trigger" href="#game"
+                        >Game</a
+                    >
+                    <a class="btn btn-primary js-scroll-trigger" href="#sprite"
+                        >Sprite</a
+                    >
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <br />
+        <section id="starting">
+            <div class="container">
+                <br />
+                <h2 class="text-black mb-4">Retro.js</h2>
+                <p class="text-black-50">
+                    Retro.js contains one function called init.
+                </p>
+                <div class="row">
+                    <table class="container">
+                        <tr>
+                            <th>Type</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Return</th>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>GAME</td>
+                            <td>
+                                This becomes the game board from which
+                                everything will be stored.
+                            </td>
+                            <td>
+                                N/A
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Function</td>
+                            <td>init</td>
+                            <td>
+                                Call this to create a game board and an instance
+                                of Retro.js
+                            </td>
+                            <td>
+                                A game instance
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <br />
+        <section id="game">
+            <div class="container">
+                <h2 class="text-black mb-4">Game</h2>
+                <p class="text-black-50"></p>
+                <div class="row">
+                    <table class="container">
+                        <tr>
+                            <th>Type</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Return</th>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>xSize</td>
+                            <td>The tables size on the x-axis</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>ySize</td>
+                            <td>The tables size on the y-axis</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>board</td>
+                            <td>
+                                The canvas instance on which everything will be
+                                placed on.
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>player</td>
+                            <td>
+                                The player sprite. There can only be one player
+                                so far
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>context</td>
+                            <td>A html canvas's context</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>refreshFrequency</td>
+                            <td>
+                                How often the game board will refresh. Increase
+                                for more fluid game play.
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>SPRITES</td>
+                            <td>
+                                A hash table containing all sprite instance on
+                                the screen. The unique id is the key and the
+                                sprite object is the value
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>scoreText</td>
+                            <td>
+                                What will appear on the top right hand corner of
+                                the screen
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>positions</td>
+                            <td>
+                                A hash table containing the locations of all the
+                                sprite instances on the screen. The unique id is
+                                the key and an array that cointains [xPos, yPos]
+                                of the sprite
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>isActive</td>
+                            <td>
+                                Refreshing will not occur while false. Should
+                                not be played with by the user. Will cause bugs
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>LEFT</td>
+                            <td>
+                                An integer that represents the key that will be
+                                used for the left player control button
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>RIGHT</td>
+                            <td>
+                                An integer that represents the key that will be
+                                used for the right player control button
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>UP</td>
+                            <td>
+                                An integer that represents the key that will be
+                                used for the up player control button
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>DOWN</td>
+                            <td>
+                                An integer that represents the key that will be
+                                used for the down player control button
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>SHOOT</td>
+                            <td>
+                                An integer that represents the key that will be
+                                used for the shooting control button
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Function</td>
+                            <td>start</td>
+                            <td>
+                                Sets the game board up and acts as the
+                                initializer. This is done automatically when
+                                creating a Retro.js instance and needs not be
+                                called by the user
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function</td>
+                            <td>update</td>
+                            <td>
+                                Calls reDraw several times a second. Frequency
+                                is determined by refreshFrequency. Allows the
+                                game to be dynamic
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function(styleName, styleValue)</td>
+                            <td>setStyle</td>
+                            <td>
+                                Given a style property name and a value, this
+                                function will change the game board. Ex.
+                                setStyle("backgroundColor", "blue")
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function(x, y)</td>
+                            <td>setSize</td>
+                            <td>
+                                Given an x and y as arguments, setSize will set
+                                the game board to those coordinates. Ex.
+                                setSize(1000,1000)
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function</td>
+                            <td>reDraw</td>
+                            <td>
+                                Renders every sprite in the game once, while
+                                discovering any collisions that may have
+                                occurred. Only useful if called frequently as is
+                                done in update
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function(path, xPos, yPos, width, height)</td>
+                            <td>createPlayer</td>
+                            <td>
+                                Calls addSprite, with special parameters to
+                                streamline player creation. Can only be called
+                                as long as a player is not already in use
+                            </td>
+                            <td>Player Sprite instance</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Function(path, id, xPos, yPos, width, height)
+                            </td>
+                            <td>addSprite</td>
+                            <td>
+                                Creates a sprite, given a image path, pair of
+                                starting coordinates and dimensions, will create
+                                a new sprite on the screen
+                            </td>
+                            <td>Sprite instance</td>
+                        </tr>
+                        <tr>
+                            <td>Function(sprite)</td>
+                            <td>detectCollision</td>
+                            <td>
+                                Determines if a sprite has collided with
+                                another. If so and a collisionBehavior is
+                                defined, then it will execute it. This should be
+                                called several times a second to be effective
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="sprite">
+            <div class="container">
+                <br />
+                <h2 class="text-black mb-4">Sprite</h2>
+                <div class="row">
+                    <p class="text-black-50">
+                        All visuals with exception of score are a Sprite object
+                        including characters and projectiles
+                    </p>
+                    <table class="container">
+                        <tr>
+                            <th>Type</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Return</th>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>sprite</td>
+                            <td>
+                                Becomes equal to an Image() instance on objects
+                                intialization. Changing this after will change
+                                the sprite. Access directly to create animations
+                                and physical charater changes
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>xPos</td>
+                            <td>
+                                The x-axis position of the sprite. To be
+                                manipulated by the move function
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>yPos</td>
+                            <td>
+                                The y-axis position of the sprite. To be
+                                manipulated by the move function
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>isStopped</td>
+                            <td>If true, this sprite cannot be moved</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>speed</td>
+                            <td>
+                                The speed of the sprite is to be determined by
+                                this property. Change after initializing to
+                                implement things like speed power ups
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>collider</td>
+                            <td>
+                                If not null, will contain the id of the last
+                                sprite to touch it
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>projectilePath</td>
+                            <td>
+                                A url containing the location of the projectile
+                                that this sprite can launch. Change after
+                                initializing to create projectile sprite changes
+                                from things like power ups
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>firedTotal</td>
+                            <td>
+                                This is the total number of projectiles fired by
+                                the sprite instance. Used to generate sprite ids
+                                and possibly useful metrics
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>creator</td>
+                            <td>
+                                Applied to all sprites and indicates which
+                                sprite created it. Typically used by projectiles
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>projectileSpeed</td>
+                            <td>
+                                How fast this sprite instance projectile
+                                travels. Modifies the speed property for the
+                                future projectile sprites that will be created
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>projectileDirection</td>
+                            <td>
+                                Allows 4 directions to be used. Setting this to
+                                "up", "down", "left" or "right" will determine
+                                how a sprites projectiles will travel
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>collisionDistance</td>
+                            <td>
+                                How close another object has to be to collide
+                                with this sprite
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Property</td>
+                            <td>game</td>
+                            <td>
+                                The game instance that this sprite lives in. Do
+                                not directly change this property
+                            </td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Function (game, spritePath, xPos, yPos, width,
+                                height)
+                            </td>
+                            <td>start</td>
+                            <td>
+                                This is a constructor for this sprites instance.
+                                Needs not be called directly as it is
+                                automatically done when addSprite/createPlayer
+                                is called in game
+                            </td>
+                            <td>A new Sprite</td>
+                        </tr>
+                        <tr>
+                            <td>Function(styleName, modifier)</td>
+                            <td>setStyle</td>
+                            <td>
+                                Sets the style of the sprite. Operates similarly
+                                to Game's version
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function(board, direction)</td>
+                            <td>move</td>
+                            <td>
+                                If isStopped is false, this function will move
+                                this sprite in the 4 cardinal directions
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Function(speed, direction)
+                            </td>
+                            <td>shoot</td>
+                            <td>
+                                Creates a projectile sprite. Works only if a
+                                projectilePath is specified in the shooters
+                                properties
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Function(projectile, direction)
+                            </td>
+                            <td>handleProjectile</td>
+                            <td>
+                                Reports if a Projectile has hit another sprite
+                                and will execute any collisionBehavior function
+                                specified in the other sprite. Will do nothing
+                                if one is not specified
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function</td>
+                            <td>destroy</td>
+                            <td>
+                                Deletes all object references to this sprite
+                                effectively destroying it
+                            </td>
+                            <td>Void</td>
+                        </tr>
+                        <tr>
+                            <td>Function(intruderID)</td>
+                            <td>collisionBehavior</td>
+                            <td>
+                                This function is deliberately empty to allow
+                                user to customize their own collisionBehavior.
+                                To set your own function simply create a new one
+                                and set spriteVariable.collisionBehavior =
+                                yourFunction. It is important to accept an
+                                intruderID as an arguments or
+                                intruder.collisionBehavior cannot execute
+                            </td>
+                            <td>Void (recommended)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

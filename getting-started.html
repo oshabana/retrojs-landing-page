@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Getting Started</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script
+            src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Google fonts-->
+        <link
+            href="https://fonts.googleapis.com/css?family=Varela+Round"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav
+            class="navbar navbar-expand-lg navbar-light fixed-top"
+            id="mainNav"
+        >
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index.html"
+                    >Retro.js</a
+                >
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link js-scroll-trigger"
+                                href="documentation.html"
+                                >Documentation</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link js-scroll-trigger"
+                                href="getting-started.html"
+                                >Getting Started</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link js-scroll-trigger"
+                                href="examples.html"
+                                >Examples</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                class="download btn-danger"
+                                class="nav-link js-scroll-trigger"
+                            >
+                                <a href="RetroJS.zip">Download</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Retro.js</h1>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+
+        <section id="starting">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <br />
+                        <h2 class="text-black mb-4">Getting Started</h2>
+                        <p class="text-black-50">
+                            To use retro.js you must first link it to the html
+                            file that will be hosting the game. First create an
+                            html file and a javascript file. Here the files will
+                            be shown as index.html and index.js.
+                        </p>
+                        <h6>
+                            In index.html
+                        </h6>
+                        <img src="img/starting-index-html.png" />
+                        <p class="text-black-50">
+                            In place of "js/retro.js" you should put the
+                            location of retro.js, similarly do the same with
+                            "js/index.js".
+                        </p>
+                        <br />
+                        <p>
+                            Next, we'll set up our index.js file by adding in a
+                            few lines
+                        </p>
+                        <img src="img/indexjs-init.PNG" />
+                        <br />
+                        <p class="small">
+                            You should try running the file at this point and
+                            see if there are any errors. If so make sure
+                            retro.js and your index.js files are in the right
+                            place
+                        </p>
+                        <p>
+                            root contains the location for the board to be
+                            placed. rt will be our reference to Retro.js from
+                            this point on. It is not really needed after the
+                            next line which creates a new board with the
+                            demensions of 1000x600.
+                        </p>
+                        <p>
+                            Our game board is now set up and ready to have
+                            sprites loaded into it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="game">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-black mb-4">Adding Characters</h2>
+                        <p class="text-black-50">
+                            A retro shooter needs enemies and of course a
+                            player. In this section we will add those features
+                            in.
+                        </p>
+                        <img src="img/creating-player-enemy.PNG" />
+                        <p>
+                            We can only createPlayer once. After passing in a
+                            player image location, width and height, we're ready
+                            to go. With the player having been created we can
+                            now specify a location for our projectile image.
+                            This is done on the second line. Adding a non player
+                            sprite has an additional argument; in the second
+                            spot after the image path, we have to specify the
+                            sprites id. ids are unique.
+                        </p>
+                        <p class="small">
+                            Make sure not to ever directly specify "Player" as
+                            an id as this is reserved for the player and is
+                            automatically done for you when calling createPlayer
+                        </p>
+                        <p>
+                            You may also wish to add a background to your game
+                            board
+                        </p>
+                        <h2 class="text-black mb-4">Adding a Background</h2>
+                        <img src="img/add-background.PNG" />
+                        <p class="small">
+                            Make sure you link your css file to your html file.
+                            Also note that the game board will always have an id
+                            of "Game". Factor this is when naming sprites
+                        </p>
+                        <h2 class="text-black mb-4">Changing Movement Keys</h2>
+                        <p>
+                            At this point the game should be playable with the
+                            user moving with W,A,S,D key and the L key to shoot.
+                            We may choose to remap these keys by reassigning the
+                            UP, DOWN, RIGHT, LEFT and SHOOT properties of your
+                            game instance.
+                        </p>
+                        <img src="img/remap.PNG" />
+                        <p class="small">
+                            Tip: use
+                            <a href="https://keycode.info/">keycode.info</a> to
+                            figure out key codes
+                        </p>
+                        <br />
+                        <h2 class="text-black mb-4">
+                            Making Use of Collisions
+                        </h2>
+                        <p>
+                            Right now, the enemy and the player can tell that
+                            they are touching each other but nothing is
+                            happening. What we have to do is specify a
+                            collisionBehavior for each sprite if we want it to
+                            do something on collision. Also, we are able to
+                            shoot the enemy but nothing is happening. Below
+                            we're going to add these functionalities in.
+                        </p>
+                        <img src="img/collision-behaviour.PNG" />
+                        <p>
+                            A few things are happening here. First, we figure
+                            out what collided with the enemy. So far there are
+                            only two possibilities, the player or the player's
+                            projectiles. We check to see if the collider is the
+                            player and specify a behaviour. We destroy the
+                            player if this is the case. Alternatively, if a
+                            projectile hits the enemy we want the enemy to be
+                            destroyed and increment the player's score. Finally
+                            this function is useless if it is not assigned as
+                            the enemy's collisionBehavior function. Note: the
+                            variable 'me' here is unused but shows how can get
+                            the enemy to be used in whatever way you want. Such
+                            me.hitpoints = 4 and then decrementing it each hit.
+                        </p>
+                        <p class="small">
+                            All projectile ids are in the form "proj" plus a
+                            number usually the current count of shots fired by
+                            its owner. ex proj100 is the 100th shot. So we can
+                            use the first 4 letters of a sprites id to determine
+                            if it is a projectile.
+                        </p>
+                        <h6>
+                            *Please checkout an example on the examples part of
+                            this website to see more about indeterminate topics
+                            like movement. <a href="examples.html">Examples</a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
